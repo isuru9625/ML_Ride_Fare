@@ -27,6 +27,16 @@ d_test["seconds"] = df1["actual_seconds"]
 d_test["pickup_day"] = d_test.pickup_time.apply(lambda x: x.weekday())
 d_test['lat_diff'] = d_test['drop_lat'] - d_test['pick_lat']
 d_test['lon_diff'] = d_test['drop_lon'] - d_test['pick_lon']
+df3 = pd.DataFrame()
+df3["lat_diff"]  = d_test["lat_diff"]
+df3["lon_diff"]  = d_test["lon_diff"]
+list2 =[]
+for i in range(0,len(df3.lat_diff)):
+    cal = df3.lat_diff[i]**2 + df3.lon_diff[i]**2 
+    cal = cal**0.5
+    list2.append(cal)
+df3["distance"] = pd.Series(list2)
+d_test["distance"] =df3["distance"]
 d_test.duration[5491] = 780
 
 d_test.to_csv("features/test_features.csv")

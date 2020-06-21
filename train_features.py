@@ -3,6 +3,16 @@ import numpy as np
 data = pd.read_csv('train.csv')
 data['lat_diff'] = data['drop_lat'] - data['pick_lat']
 data['lon_diff'] = data['drop_lon'] - data['pick_lon']
+df2 = pd.DataFrame()
+df2["lat_diff"]  = data["lat_diff"]
+df2["lon_diff"]  = data["lon_diff"]
+list1 =[]
+for i in range(0,len(df2.lat_diff)):
+    cal = df2.lat_diff[i]**2 + df2.lon_diff[i]**2 
+    cal = cal**0.5
+    list1.append(cal)
+df2["distance"] = pd.Series(list1)
+data["distance"] =df2["distance"]
 data["pickup_time"] = pd.to_datetime(data.pickup_time)
 data["drop_time"] = pd.to_datetime(data.drop_time)
 data["pickup_year"] = data.pickup_time.dt.year

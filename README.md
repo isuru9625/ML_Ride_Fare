@@ -11,4 +11,6 @@ To run both those files should crate a directoryh as "features" in root director
 To remove outliers run - outliers.py(create "Outliers_Handling" directory in root directory brfor executing outlier.py)
 
 
+To handle missing values, run - missing_values.py(create "Missing_Values_Handling" directory in root directory brfor executing missing_values.py)
+
 

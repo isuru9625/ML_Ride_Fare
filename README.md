@@ -14,3 +14,5 @@ To remove outliers run - outliers.py(create "Outliers_Handling" directory in roo
 To handle missing values, run - missing_values.py(create "Missing_Values_Handling" directory in root directory brfor executing missing_values.py)
 
 
+Finally run - train_and_predict.py(create "Submissions" directory in root directory brfor executing train_and_predict.py)
+

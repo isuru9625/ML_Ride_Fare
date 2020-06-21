@@ -66,4 +66,4 @@ data.to_csv("Missing_Values_Handling/final_train.csv")
 
 d_test = pd.read_csv("Outliers_Handling/test_features.csv")
 #Since no missing values are there
-data.to_csv("Missing_Values_Handling/final_test.csv")
+d_test.to_csv("Missing_Values_Handling/final_test.csv")
